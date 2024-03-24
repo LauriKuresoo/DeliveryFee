@@ -1,0 +1,19 @@
+<html>
+<head><title>Home Page</title></head>
+<body>
+<h2>Select City and Vehicle Type</h2>
+<form id="deliveryForm" action="/submit" th:object="${fee}" method="post">
+    <label for="city">Select City:</label>
+    <select id="city" name="cityName">
+        <option th:each="cityName : ${cityNames}" th:value="${cityName}" th:text="${cityName}"></option>
+    </select>
+    <br><br>
+    <label for="vehicle">Select Vehicle Type:</label>
+    <select id="vehicle" name="vehicleType">
+        <option th:each="vechileName : ${vechileNames}" th:value="${vechileName}" th:text="${vechileName}"></option>
+    </select>
+    <br><br>
+    <button type="submit">Show delivery fee</button>
+</form>
+</body>
+</html>
