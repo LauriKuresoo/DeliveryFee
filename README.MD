@@ -1,1 +1,1 @@
-The application runs on port 8082.
+The web application runs on port 8082.
